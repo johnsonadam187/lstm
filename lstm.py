@@ -43,7 +43,6 @@ def run_process(mp_model):
             rgb_image = convert_image(frame, cv2.COLOR_BGR2RGB)
             pose_points = pose_detection_results(rgb_image, pose_detection_model)
             points_array = flatten_pose_results(pose_points)
-            print(points_array)
             draw_holistic_pose(frame, pose_points)
             # print(pose_points)
             cv2.imshow("Camera Feed", frame)
