@@ -30,8 +30,8 @@ def draw_holistic_pose(image, results):
 
 def flatten_pose_results(results):
     flattened = np.array([[res.x, res.y, res.z, res.visibility]for res in results.pose_landmarks.landmark]).flatten() if results.pose_landmarks else np.zeros(132)
+    #think about affect of visibility on the model
     return flattened
-
 
 
 def run_process(mp_model):
